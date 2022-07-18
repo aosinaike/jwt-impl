@@ -5,9 +5,6 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface StaffRepository extends JpaRepository<StaffModel, Integer> {
-
-    public StaffModel addStaff(StaffModel staffModel);
-    public StaffModel updateStaff(StaffModel staff);
-    public StaffModel getStaffModelByUuid(UUID staffUuid);
+public interface StaffRepository extends JpaRepository<Staff, Long> {
+    public Staff getStaffModelByUuid(String staffUuid);
 }
